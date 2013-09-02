@@ -1,0 +1,81 @@
+{ "name": "LOLCODE",
+  "scopeName": "source.lol",
+  "fileTypes": ["lol"],
+  "patterns": [
+  	{ "match": "(\\W|^)HAI|R|YR|AN|KTHXBAI|I\\sFOUND|MKAY",
+  	  "name": "keyword.lol"
+  	},
+    { "match": "(\\W|^)SUMZ\\sOF|SUM\\sOF|DIFF\\sOF|DIFFZ\\sOF|QUOSHUNT\\sOF|QUOSHUNTZ\\sOF|PRODUKTZ\\sOF|PRODUKT\\sOF|MODZ\\sOF|MOD\\sOF|BIGGR\\sOF|SMALLR\\sOF",
+      "name": "support.function.LOLCODE.lol"
+    },
+    { "match": "(\\W|^)BOTH\\sOF|EITHER\\sOF|WON\\sOF|NOT|ALL\\sOF|ANY\\sOF",
+      "name": "support.function.LOLCODE.lol"
+    },
+    { "match": "(\\W|^)BOTH\\sSAEM|DIFFRINT",
+      "name": "support.function.LOLCODE.lol"
+    },
+    { "match": "(\\W|^)TROOF|YARN|NOOB|NUMBAR|NUMBR",
+      "name": "storage.type.lol"
+    },
+    { "match": "(\\W|^)WIN|FAIL|LOOP",
+      "name": "keyword.lol"
+    },
+    { "match": "(\\W|^)OIC|OMG|WTF\\?",
+      "name": "string.quoted.other.lt-gt.include.lol"
+    },
+    { "begin": "^\\s*\\s*CAN\\sHAZ\\b\\s+",
+      "end": "\\?",
+      "captures": {
+          "1": { "name": "keyword.control.import.include.lol" }
+      },
+      "name": "string.quoted.other.include.lol"
+    },
+    { "begin": "\\s*\\s*ITZ\\sA\\b\\s+",
+      "end": "\\n",
+      "captures": {
+          "1": { "name": "keyword.control.import.include.lol" }
+      },
+      "name": "string.quoted.other.include.lol"
+    },
+    { "begin": "^\\s*HOW\\sDUZ\\sI",
+      "end": "\\s",
+      "captures": {
+          "1": { "name": "meta.keyword.include.lol" }
+      },
+      "name": "support.function.STL.lol"
+    },
+    { "match": "^\\s*\\s*I\\sHAS\\sA\\b\\s+",
+      "name": "string.quoted.other.lt-gt.include.lol"
+    },
+    { "match": "\\s*\\s*O\\sRLY\\?",
+      "name": "string.quoted.other.lt-gt.include.lol"
+    },
+    { "begin": "^\\s*IF\\sU\\sSAY\\sSO",
+      "end": "$\\n?",
+      "captures": {
+          "0": { "name": "meta.keyword.include.lol" }
+      },
+      "name": "support.function.STL.lol"
+    },
+    { "patterns": [
+      {
+        "captures": {
+            "1": { "name": "meta.toc-list.banner.block.lol" }
+        },
+        "match": "BTW",
+        "name": "comment.block.lol"
+      },
+      { "name": "comment.block.lol",
+        "begin": "OBTW",
+        "end": "TLDR"
+      },
+      { "name": "invalid.illegal.stray-comment-end.lol",
+        "begin": "OBTW",
+        "end": "TLDR.*\\n"
+      }
+    ]
+
+    }
+  ],
+  "uuid": "f2bee1bd-e059-41c0-858e-bf17c1340814"
+}
