@@ -12,7 +12,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(\W|^)(HAI|R|YR|AN|KTHXBAI|I\sFOUND|MKAY|LOL)</string>
+			<string>(\W|^)(HAI|R|AN|TIL|MAEK|LOOP|KTHXBAI|I\sFOUND|IM\sIN|IM\sOUTTA|MKAY|LOL|GTFO)(\W|$)</string>
 			<key>name</key>
 			<string>keyword.lol</string>
 		</dict>
@@ -30,13 +30,19 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\W|^)BOTH\sSAEM|DIFFRINT</string>
+			<string>BOTH\sSAEM|DIFFRINT</string>
 			<key>name</key>
 			<string>support.function.LOLCODE.lol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\W|^)COMPLAIN|VISIBLE</string>
+			<string>\s(\W|^)UP|UPPIN|YR</string>
+			<key>name</key>
+			<string>support.function.LOLCODE.lol</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\W|^)COMPLAIN|VISIBLE|GIMMEH</string>
 			<key>name</key>
 			<string>support.function.LOLCODE.lol</string>
 		</dict>
@@ -48,7 +54,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\W|^)WIN|FAIL|LOOP</string>
+			<string>(\W|^)WIN|FAIL</string>
 			<key>name</key>
 			<string>keyword.lol</string>
 		</dict>
@@ -76,7 +82,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\s*\s*ITZ\sA\b\s+</string>
+			<string>\s*\s*ITZ\s*((ALL|A)*)</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -89,6 +95,12 @@
 			<string>\n</string>
 			<key>name</key>
 			<string>string.quoted.other.include.lol</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\s*\s*IN\sMAH</string>
+			<key>name</key>
+			<string>keyword.lol</string>
 		</dict>
 		<dict>
 			<key>begin</key>

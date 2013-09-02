@@ -2,7 +2,7 @@
   "scopeName": "source.lol",
   "fileTypes": ["lol"],
   "patterns": [
-  	{ "match": "(\\W|^)(HAI|R|YR|AN|KTHXBAI|I\\sFOUND|MKAY|LOL)",
+  	{ "match": "(\\W|^)(HAI|R|AN|TIL|MAEK|LOOP|KTHXBAI|I\\sFOUND|IM\\sIN|IM\\sOUTTA|MKAY|LOL|GTFO)(\\W|$)",
   	  "name": "keyword.lol"
   	},
     { "match": "(\\W|^)SUMZ\\sOF|SUM\\sOF|DIFF\\sOF|DIFFZ\\sOF|QUOSHUNT\\sOF|QUOSHUNTZ\\sOF|PRODUKTZ\\sOF|PRODUKT\\sOF|MODZ\\sOF|MOD\\sOF|BIGGR\\sOF|SMALLR\\sOF",
@@ -11,16 +11,19 @@
     { "match": "(\\W|^)BOTH\\sOF|EITHER\\sOF|WON\\sOF|NOT|ALL\\sOF|ANY\\sOF",
       "name": "support.function.LOLCODE.lol"
     },
-    { "match": "(\\W|^)BOTH\\sSAEM|DIFFRINT",
+    { "match": "BOTH\\sSAEM|DIFFRINT",
       "name": "support.function.LOLCODE.lol"
     },
-    { "match": "(\\W|^)COMPLAIN|VISIBLE",
+    { "match": "\\s(\\W|^)UP|UPPIN|YR",
+      "name": "support.function.LOLCODE.lol"
+    },
+    { "match": "(\\W|^)COMPLAIN|VISIBLE|GIMMEH",
       "name": "support.function.LOLCODE.lol"
     },
     { "match": "(\\W|^)TROOF|YARN|NOOB|NUMBAR|NUMBR",
       "name": "storage.type.lol"
     },
-    { "match": "(\\W|^)WIN|FAIL|LOOP",
+    { "match": "(\\W|^)WIN|FAIL",
       "name": "keyword.lol"
     },
     { "match": "(\\W|^)OIC|OMG|OMGWTF|MEBBE|WTF\\?",
@@ -33,12 +36,15 @@
       },
       "name": "string.quoted.other.include.lol"
     },
-    { "begin": "\\s*\\s*ITZ\\sA\\b\\s+",
+    { "begin": "\\s*\\s*ITZ\\s*((ALL|A)*)",
       "end": "\\n",
       "captures": {
         "1": { "name": "keyword.control.import.include.lol" }
       },
       "name": "string.quoted.other.include.lol"
+    },
+    { "match": "\\s*\\s*IN\\sMAH",
+      "name": "keyword.lol"
     },
     { "begin": "^\\s*HOW\\sDUZ\\sI",
       "end": "\\s",
