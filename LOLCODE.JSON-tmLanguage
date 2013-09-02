@@ -2,7 +2,7 @@
   "scopeName": "source.lol",
   "fileTypes": ["lol"],
   "patterns": [
-  	{ "match": "(\\W|^)HAI|R|YR|AN|KTHXBAI|I\\sFOUND|MKAY",
+  	{ "match": "(\\W|^)(HAI|R|YR|AN|KTHXBAI|I\\sFOUND|MKAY|LOL)",
   	  "name": "keyword.lol"
   	},
     { "match": "(\\W|^)SUMZ\\sOF|SUM\\sOF|DIFF\\sOF|DIFFZ\\sOF|QUOSHUNT\\sOF|QUOSHUNTZ\\sOF|PRODUKTZ\\sOF|PRODUKT\\sOF|MODZ\\sOF|MOD\\sOF|BIGGR\\sOF|SMALLR\\sOF",
@@ -14,33 +14,36 @@
     { "match": "(\\W|^)BOTH\\sSAEM|DIFFRINT",
       "name": "support.function.LOLCODE.lol"
     },
+    { "match": "(\\W|^)COMPLAIN|VISIBLE",
+      "name": "support.function.LOLCODE.lol"
+    },
     { "match": "(\\W|^)TROOF|YARN|NOOB|NUMBAR|NUMBR",
       "name": "storage.type.lol"
     },
     { "match": "(\\W|^)WIN|FAIL|LOOP",
       "name": "keyword.lol"
     },
-    { "match": "(\\W|^)OIC|OMG|WTF\\?",
+    { "match": "(\\W|^)OIC|OMG|OMGWTF|MEBBE|WTF\\?",
       "name": "string.quoted.other.lt-gt.include.lol"
     },
     { "begin": "^\\s*\\s*CAN\\sHAZ\\b\\s+",
       "end": "\\?",
       "captures": {
-          "1": { "name": "keyword.control.import.include.lol" }
+        "1": { "name": "keyword.control.import.include.lol" }
       },
       "name": "string.quoted.other.include.lol"
     },
     { "begin": "\\s*\\s*ITZ\\sA\\b\\s+",
       "end": "\\n",
       "captures": {
-          "1": { "name": "keyword.control.import.include.lol" }
+        "1": { "name": "keyword.control.import.include.lol" }
       },
       "name": "string.quoted.other.include.lol"
     },
     { "begin": "^\\s*HOW\\sDUZ\\sI",
       "end": "\\s",
       "captures": {
-          "1": { "name": "meta.keyword.include.lol" }
+        "1": { "name": "meta.keyword.include.lol" }
       },
       "name": "support.function.STL.lol"
     },
@@ -50,17 +53,33 @@
     { "match": "\\s*\\s*O\\sRLY\\?",
       "name": "string.quoted.other.lt-gt.include.lol"
     },
+    { "match": "\\s*\\s*YA\\sRLY",
+      "name": "string.quoted.other.lt-gt.include.lol"
+    },
+    { "match": "\\s*\\s*NO\\sWAI",
+      "name": "string.quoted.other.lt-gt.include.lol"
+    },
     { "begin": "^\\s*IF\\sU\\sSAY\\sSO",
       "end": "$\\n?",
       "captures": {
-          "0": { "name": "meta.keyword.include.lol" }
+        "0": { "name": "meta.keyword.include.lol" }
       },
       "name": "support.function.STL.lol"
+    },
+    { "name": "string.quoted.double.lol",
+      "begin": "\"",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.lol" }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.lol" }
+      }
     },
     { "patterns": [
       {
         "captures": {
-            "1": { "name": "meta.toc-list.banner.block.lol" }
+          "1": { "name": "meta.toc-list.banner.block.lol" }
         },
         "match": "BTW",
         "name": "comment.block.lol"
@@ -74,7 +93,6 @@
         "end": "TLDR.*\\n"
       }
     ]
-
     }
   ],
   "uuid": "f2bee1bd-e059-41c0-858e-bf17c1340814"

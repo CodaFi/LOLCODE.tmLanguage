@@ -12,7 +12,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(\W|^)HAI|R|YR|AN|KTHXBAI|I\sFOUND|MKAY</string>
+			<string>(\W|^)(HAI|R|YR|AN|KTHXBAI|I\sFOUND|MKAY|LOL)</string>
 			<key>name</key>
 			<string>keyword.lol</string>
 		</dict>
@@ -36,6 +36,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>(\W|^)COMPLAIN|VISIBLE</string>
+			<key>name</key>
+			<string>support.function.LOLCODE.lol</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>(\W|^)TROOF|YARN|NOOB|NUMBAR|NUMBR</string>
 			<key>name</key>
 			<string>storage.type.lol</string>
@@ -48,7 +54,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\W|^)OIC|OMG|WTF\?</string>
+			<string>(\W|^)OIC|OMG|OMGWTF|MEBBE|WTF\?</string>
 			<key>name</key>
 			<string>string.quoted.other.lt-gt.include.lol</string>
 		</dict>
@@ -113,6 +119,18 @@
 			<string>string.quoted.other.lt-gt.include.lol</string>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>\s*\s*YA\sRLY</string>
+			<key>name</key>
+			<string>string.quoted.other.lt-gt.include.lol</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\s*\s*NO\sWAI</string>
+			<key>name</key>
+			<string>string.quoted.other.lt-gt.include.lol</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>^\s*IF\sU\sSAY\sSO</string>
 			<key>captures</key>
@@ -127,6 +145,30 @@
 			<string>$\n?</string>
 			<key>name</key>
 			<string>support.function.STL.lol</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>"</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.lol</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>"</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.lol</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.double.lol</string>
 		</dict>
 		<dict>
 			<key>patterns</key>
