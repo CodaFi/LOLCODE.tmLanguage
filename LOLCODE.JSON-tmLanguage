@@ -2,9 +2,9 @@
   "scopeName": "source.lol",
   "fileTypes": ["lol"],
   "patterns": [
-  	{ "match": "(\\W|^)(HAI|R|AN|TIL|MAEK|LOOP|KTHXBAI|I\\sFOUND|IM\\sIN|IM\\sOUTTA|MKAY|LOL|GTFO)(\\W|$)",
-  	  "name": "keyword.lol"
-  	},
+    { "match": "\b(\\W|^)(HAI|R|AN|TIL|MAEK|LOOP|KTHXBAI|I\\sFOUND|IM\\sIN|IM\\sOUTTA|MKAY|LOL|GTFO)(\\W|$)\b",
+      "name": "keyword.lol"
+    },
     { "match": "(\\W|^)SUMZ\\sOF|SUM\\sOF|DIFF\\sOF|DIFFZ\\sOF|QUOSHUNT\\sOF|QUOSHUNTZ\\sOF|PRODUKTZ\\sOF|PRODUKT\\sOF|MODZ\\sOF|MOD\\sOF|BIGGR\\sOF|SMALLR\\sOF",
       "name": "support.function.LOLCODE.lol"
     },
