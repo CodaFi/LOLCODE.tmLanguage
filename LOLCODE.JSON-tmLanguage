@@ -87,7 +87,7 @@
         "captures": {
           "1": { "name": "meta.toc-list.banner.block.lol" }
         },
-        "match": "BTW",
+        "match": "BTW.*",
         "name": "comment.block.lol"
       },
       { "name": "comment.block.lol",
