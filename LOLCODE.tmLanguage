@@ -195,7 +195,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>BTW</string>
+					<string>BTW.*</string>
 					<key>name</key>
 					<string>comment.block.lol</string>
 				</dict>
